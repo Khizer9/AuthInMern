@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const Joi = require("joi");
 
 router.post("/", async (req, res) => {
+	
 	try {
 		const { error } = validate(req.body);
 		if (error)
@@ -23,7 +24,7 @@ router.post("/", async (req, res) => {
 		const token = user.generateAuthToken();
 		res.status(200).send({ data: token, message: "logged in successfully" });
 	} catch (error) {
-		res.status(500).send({ message: "Internal Server Error" });
+		res.status(500).send({ message: "Internal Server Errorrrrr" });
 	}
 });
 
